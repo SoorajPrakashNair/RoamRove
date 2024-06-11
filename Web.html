@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.RoamRover.com</title>
+    <link rel="stylesheet" href="Webstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">RoamRover.</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+         <div class="navigation-items">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Explore</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+            <a href="#">About us</a>
+         </div>
+        </div>
+    </header>
+    <section class="home">
+       <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+       <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+       <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+       <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <div class="content">
+         <h1>Wonderful. <br><span></span></h1>
+         <p>Sunrises are one of nature's most breathtaking displays, symbolizing new beginnings and the promise of a fresh start. As the sun ascends, it paints the sky with a palette of vibrant colors, blending hues of orange, pink, and gold that gradually illuminate the world. This tranquil moment is often accompanied by a sense of peace and reflection, as the quiet of dawn offers a serene contrast to the bustle of daily life. The gentle waves of the ocean catching the first light of day enhance the beauty of a sunrise, creating a mesmerizing scene that captivates and inspires. Whether observed from a sandy beach or a lofty mountain peak, sunrises remind us of the endless possibilities each new day brings.</p>
+         <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Explor. <br><span></span></h1>
+        <p>Explorers are bold individuals who embark on journeys to discover new lands, cultures, and experiences. Armed with curiosity and courage, they venture into the unknown, driven by a thirst for knowledge and adventure. These intrepid souls brave treacherous terrain, harsh climates, and daunting obstacles in their quest for discovery.Explorers often face uncertainty and danger as they chart uncharted territories and push the boundaries of human exploration. They traverse vast oceans, dense forests, towering mountains, and barren deserts, guided by a pioneering spirit and a relentless determination to unravel the mysteries of the world.</p>
+        <a href="#">Read More</a>
+     </div>
+     <div class="content">
+       <h1>Globetrotters. <br><span></span></h1>
+       <p>Globetrotters, the modern-day adventurers of our world, are individuals who traverse the globe in search of enriching experiences and cultural immersion. These intrepid souls embark on journeys that span continents, exploring the far reaches of our planet with an insatiable curiosity and a thirst for adventure. Armed with passports, backpacks, and an open mind, they traverse bustling metropolises, tranquil villages, and remote wilderness areas, seeking to unravel the tapestry of human civilization.For globetrotters, travel is not just a leisure activity but a way of life—a profound and transformative journey that shapes their worldview and enriches their understanding of the world.</p>
+       <a href="#">Read More</a>
+     </div>
+     <div class="content">
+       <h1>Roamers. <br><span></span></h1>
+       <p>The free spirits of our world, are individuals who wander with no fixed destination, guided by the call of adventure and the desire for exploration. They embrace the journey itself, rather than the destination, and find joy in the unpredictability of life on the road.These nomadic souls roam across landscapes both familiar and foreign, their footsteps tracing paths through bustling cities, serene countrysides, and rugged wilderness. With a sense of curiosity as their compass and a backpack as their only companion, they set out to discover the hidden gems and secret wonders that lie off the beaten path.For roamers, every encounter is an opportunity for discovery, every moment a chance to connect with the world and its inhabitants.</p>
+       <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a> 
+      </div>
+      <div class="slider-navigation">
+         <div class="nav-btn "></div>
+         <div class="nav-btn "></div>
+         <div class="nav-btn "></div>
+         <div class="nav-btn "></div>
+      </div>
+    </section>
+    <script>
+      //java for video sliding navigation
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const content = document.querySelectorAll(".content");
+
+      var sliderNav = function(manual){
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        content.forEach((content) => {
+          content.classList.remove("active");
+        });
+        
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        content[manual].classList.add("active");
+      }
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+ </body>
+</html>
